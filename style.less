@@ -1,0 +1,205 @@
+@wholeWidth: 100%;
+@textMargin: 1rem;
+
+@singleQueryl: ~"(max-width:425px)";
+@singleQuerys: ~"(max-width:320px)";
+
+@backColorGreen: #5fc0cd;
+@textColorWhite: #ffffff;
+@placeHolderColor: #e1e5e7;
+
+@placeHolderIndex: 1.2rem;
+@placeHolderl: 1rem;
+@placeHolders: .8rem;
+body {
+  padding: 0;
+  margin: 0;
+  width: @wholeWidth;
+  background-color: #eff0f4;
+  font-size: 62.5%;
+  .whole {
+    width: @wholeWidth;
+    margin: 0 auto;
+    .bar {
+      display: flex;
+      align-items: center;
+      height: 6rem;
+      @media screen,@singleQueryl {
+        height: 4rem;
+      }
+      @media screen,@singleQuerys {
+        height: 2.5rem;
+      }
+      color: @textColorWhite;
+      background-color: @backColorGreen;
+      .close, .register {
+        display: inline-block;
+        font-size: 2rem;
+        @media screen,@singleQueryl {
+          font-size: 1.5rem;
+        }
+        @media screen,@singleQuerys {
+          font-size: 1rem;
+        }
+      }
+
+      .close {
+        margin-left: @textMargin;
+      }
+      .register {
+        margin-right: @textMargin;
+      }
+      .login {
+        display: inline-block;
+        margin: 0 auto;
+        font-size: 2.3rem;
+        @media screen,@singleQueryl {
+          font-size: 1.8rem;
+        }
+        @media screen,@singleQuerys {
+          font-size: 1.3rem;
+        }
+      }
+    }
+    .phone, .passwd {
+      margin-top: 1rem;
+      display: flex;
+      align-items: center;
+      height: 4.5rem;
+      background-color: @textColorWhite;
+      @media screen,@singleQueryl {
+        height: 3.8rem;
+      }
+      @media screen,@singleQuerys {
+        height: 3rem;
+      }
+      .icon {
+        margin-left: 1.9rem;
+        width: 1.4rem;
+        @media screen,@singleQueryl {
+          margin-left: 1.4rem;
+          width: 1.2rem;
+        }
+        @media screen,@singleQuerys {
+          margin-left: 1.1rem;
+          width: 1rem;
+        }
+      }
+      .vertical-line {
+        display: inline-block;
+        width: 2px;
+        height: 2.5rem;
+        margin-left: 2.1rem;
+        background-color: #eaedee;
+        @media screen,@singleQueryl {
+          margin-left: 1.7rem;
+        }
+        @media screen,@singleQuerys {
+          margin-left: 1.3rem;
+          height: 2rem;
+        }
+      }
+      .text {
+        margin-left: 2rem;
+        margin-right: 2rem;
+        width: 90%;
+        height: 2rem;
+        border: none;
+        outline: medium;
+        @media screen,@singleQueryl {
+          margin-left: 1.7rem;
+        }
+        @media screen,@singleQuerys {
+          margin-left: 1.3rem;
+        }
+      }
+      input::-webkit-input-placeholder {
+        color: @placeHolderColor;
+        font-size: @placeHolderIndex;
+      }
+      input:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+        color: @placeHolderColor;
+        font-size: @placeHolderIndex;
+      }
+      input::-moz-placeholder { /* Mozilla Firefox 19+ */
+        color: @placeHolderColor;
+        font-size: @placeHolderIndex;
+      }
+      input:-ms-input-placeholder { /* Internet Explorer 10+ */
+        color: @placeHolderColor;
+        font-size: @placeHolderIndex;
+      }
+      @media screen,@singleQueryl {
+        input::-webkit-input-placeholder {
+          color: @placeHolderColor;
+          font-size: @placeHolderl;
+        }
+
+        input:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+          color: @placeHolderColor;
+          font-size: @placeHolderl;
+        }
+
+        input::-moz-placeholder { /* Mozilla Firefox 19+ */
+          color: @placeHolderColor;
+          font-size: @placeHolderl;
+        }
+
+        input:-ms-input-placeholder { /* Internet Explorer 10+ */
+          color: @placeHolderColor;
+          font-size: @placeHolderl;
+        }
+      }
+      @media screen,@singleQuerys {
+        input::-webkit-input-placeholder {
+          color: @placeHolderColor;
+          font-size: @placeHolders;
+        }
+
+        input:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+          color: @placeHolderColor;
+          font-size: @placeHolders;
+        }
+
+        input::-moz-placeholder { /* Mozilla Firefox 19+ */
+          color: @placeHolderColor;
+          font-size: @placeHolders;
+        }
+
+        input:-ms-input-placeholder { /* Internet Explorer 10+ */
+          color: @placeHolderColor;
+          font-size: @placeHolders;
+        }
+      }
+    }
+    button {
+      margin-top: 4rem;
+      height: 5.5rem;
+      color: @textColorWhite;
+      font-size: 2.3rem;
+      background-color: @backColorGreen;
+      border: none;
+      width: @wholeWidth;
+      @media screen,@singleQueryl {
+        height: 4rem;
+        font-size: 1.8rem;
+      }
+      @media screen,@singleQuerys {
+        height: 2.7rem;
+        font-size: 1.3rem;
+      }
+    }
+    .forget {
+      float: right;
+      margin-right: 1rem;
+      color: @backColorGreen;
+      font-size: 2rem;
+      @media screen,@singleQueryl {
+        font-size: 1.5rem;
+      }
+      @media screen,@singleQuerys {
+        font-size: 1.1rem;
+      }
+    }
+  }
+}
